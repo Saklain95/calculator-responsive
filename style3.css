@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.maincard {
+    width: 90%; /* Make it flexible to fit small screens */
+    max-width: 500px; /* Cap the maximum size */
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 25px;
+}
+
+button {
+    width: 100%;
+    padding: 10%; /* Make the buttons scale based on screen size */
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.orange {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+.orange:hover {
+    background: linear-gradient(135deg, #ffaf85, #ff7b79);
+}
+
+.orange:active {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#display {
+    width: 100%;
+    font-size: 3rem; /* Scalable font size */
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    padding: 20px;
+    text-align: right;
+    border-radius: 15px;
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.1), inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    #keys {
+        gap: 10px;
+    }
+
+    button {
+        padding: 8%; /* Smaller padding on medium devices */
+        font-size: 1.5rem; /* Smaller button font size */
+    }
+
+    #display {
+        font-size: 2.5rem; /* Scale down the display text */
+    }
+}
+
+@media (max-width: 480px) {
+    #keys {
+        gap: 8px;
+    }
+
+    button {
+        padding: 6%; /* Even smaller padding on small devices */
+        font-size: 1.2rem; /* Smaller font size for buttons */
+    }
+
+    #display {
+        font-size: 2rem; /* Smaller display font */
+        padding: 15px; /* Adjust padding for the display */
+    }
+}
